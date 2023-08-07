@@ -20,7 +20,7 @@ export default function App() {
         <Route path="/price/:symbol" element={<Price/>}/>
         <Route
         path="*"
-        element={<NotFoundPage/>}
+        Navigate={<Navigate to="/"/>}
       />
       </Routes>
     </div> 
