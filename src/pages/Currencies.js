@@ -28,10 +28,10 @@ export const Currencies = props => {
 
   return(
     <div>
-      {currencies.map(coin => {
+      {currencies.map((coin, coinId) => {
         const { symbol, name} = coin
         return(
-          <Link to={`/price/${symbol}`}>
+          <Link key={coin.coinId}to={`/price/${symbol}`}>
             <h2>{name}</h2>
           </Link>
         )
